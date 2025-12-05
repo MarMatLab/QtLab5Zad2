@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->spinBoxGreen, &QSpinBox::valueChanged, this, &MainWindow::change_green_slider_and_pixmap);
     connect(ui->spinBoxBlue, &QSpinBox::valueChanged, this, &MainWindow::change_blue_slider_and_pixmap);
 
-    updateColor();
+    updateColour();
 }
 
 MainWindow::~MainWindow()
@@ -69,6 +69,7 @@ void MainWindow::calendar_date_changed(const QDate &date)
 void MainWindow::radio_clicked(int id)
 {
     QString value = "";
+
     if(id == this->ui->radioButtons->id(this->ui->rb1))
     {
         value = "Pierwszy";
@@ -105,22 +106,22 @@ void MainWindow::change_blue_spin(int val)
 void MainWindow::change_red_slider_and_pixmap(int val)
 {
     ui->horizontalSliderRed->setValue(val);
-    updateColor();
+    updateColour();
 }
 
 void MainWindow::change_green_slider_and_pixmap(int val)
 {
     ui->horizontalSliderGreen->setValue(val);
-    updateColor();
+    updateColour();
 }
 
 void MainWindow::change_blue_slider_and_pixmap(int val)
 {
     ui->horizontalSliderBlue->setValue(val);
-    updateColor();
+    updateColour();
 }
 
-void MainWindow::updateColor()
+void MainWindow::updateColour()
 {
     static size_t i = 0;
     QPixmap mapa(this->ui->labelPixmap->size());

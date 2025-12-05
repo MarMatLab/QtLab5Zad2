@@ -36,6 +36,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    void updateColor();
+    void updateColour();
 };
 #endif // MAINWINDOW_H
