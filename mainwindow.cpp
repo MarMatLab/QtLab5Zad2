@@ -126,6 +126,7 @@ void MainWindow::updateColor()
     QPixmap mapa(this->ui->labelPixmap->size());
     mapa.fill(QColor(this->ui->spinBoxRed->value(), this->ui->spinBoxGreen->value(), this->ui->spinBoxBlue->value()));
     this->ui->labelPixmap->setPixmap(mapa);
-    i++;
+
     qInfo() << "Zmieniono kolor" << i << "razy.";
+    i++;
 }
